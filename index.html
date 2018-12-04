@@ -1,0 +1,26 @@
+<title>Bubble Breach</title>
+<script src="P5/p5.js"></script>
+<script src="sketch.js"></script>
+<script src="particle.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="images/icon.png">
+<script>
+    function reset(){
+        document.getElementById('defaultCanvas0').style.display='none';
+        a=[];
+        i=0;
+        ii=0;
+        jj=2;
+        speed=1;
+        fc=100;
+        life=50;
+        frameRate(0);
+    }
+    function start(){
+       document.getElementById('defaultCanvas0').style.display='block';
+        score=0;
+        lost=0;
+        mX=vW/2,mY=vH-300;
+        frameRate(60);
+    }
+</script>
