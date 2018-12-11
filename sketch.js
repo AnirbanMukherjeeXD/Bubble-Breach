@@ -15,6 +15,7 @@ var vH=document.documentElement.clientHeight;
 var vW=document.documentElement.clientWidth;
 var mX=vW/2,mY=vH-300;
 var maxLength=0;
+var keyC=2;
 function setup() {
 	n=2;
 	//frameRate(20);
@@ -32,7 +33,6 @@ function draw() {
 	background(0);
     textSize(30);
     textFont('Tw Cen MT');
-  
     fill(200);
     txt="Lives: "+life+" Score: "+score;
     text(txt,50,50);
@@ -90,15 +90,19 @@ function draw() {
 }
 
 /*DEBUG PAUSE MODE */
-function mousePressed() {
-    if (!pause) {
-        console.log("Pause");
-        frameRate(0);
-        pause=true;
-    } else {
-        console.log("Play");
-        pause=false;
-        frameRate(60);
-    }
+function keyPressed() {
+	if(keyCode==80){
+		if (!pause) {
+			console.log("Pause");
+			frameRate(0);
+			pause=true;
+		} else {
+			console.log("Play");
+			pause=false;
+			frameRate(60);
+		}
+	}
 }
+
+
 /////////////////////
